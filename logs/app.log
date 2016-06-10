@@ -1,0 +1,4 @@
+[INFO] 2016-06-10 15:43:51,361 selenium.page.pattern.HomePagePattern enterUserAndPass - Logging with /
+[INFO] 2016-06-10 15:44:01,930 selenium.page.pattern.HomePagePattern enterUserAndPass - Logging with /password
+[INFO] 2016-06-10 15:44:12,488 selenium.page.pattern.HomePagePattern enterUserAndPass - Logging with username/
+[INFO] 2016-06-10 15:44:13,173 selenium.page.pattern.HomePagePattern enterUserAndPass - Logging with selenium20160610/gls27100G
