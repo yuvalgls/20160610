@@ -21,9 +21,8 @@ public class HomePage extends tools.selenium {
 	@Parameters
 	public static Collection<String[]> addedNumbers() {
 		return Arrays.asList(new String[][] { { "", "", "missingEmailError" },
-				{ "", "password", "missingEmailError" },
 				{ "username", "", "missingPasswordError" },
-				{ "selenium20160610", "gls27100G", "true" } });
+				{ "selenium20160610", "gls27100G", "loggedUser" } });
 	}
 
 	public HomePage(String username, String password, String expected) {
@@ -48,6 +47,7 @@ public class HomePage extends tools.selenium {
 	@Test
 	public void login() {
 		HomePagePattern hp = new HomePagePattern(true);
+		hp.validateTitle();
 		hp.enterUserAndPass(username, password);
 		hp.analizeResults(expected);
 	}

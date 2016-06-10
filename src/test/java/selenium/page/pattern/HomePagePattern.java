@@ -15,6 +15,8 @@ public class HomePagePattern extends tools.selenium {
 	String URL = "http://www.gmail.com/";
 	String INVALID_PASSWORD_ERROR = "Please enter your password.";
 	String MISSING_EMAIL_ERROR = "Please enter your email.";
+	String VALID_USERNAME = "selenium20160610";
+	String VALID_PASSWORD = "gls27100G";
 
 	@FindBy(id = "Email")
 	WebElement txtUserName;
@@ -58,34 +60,35 @@ public class HomePagePattern extends tools.selenium {
 		}
 	}
 
+	public void validateTitle() {
+		Assert.assertEquals("Gmail", driver.getTitle().toString());
+	}
+
 	public void clickOnNext() {
 		try {
 			btnNext.click();
 		} catch (Exception e) {
-			System.out.println(e);
 			logger.info("error clicing on next");
 		}
 	}
 
 	public void enterPassword(String password) {
 		try {
-			new WebDriverWait(driver, 10).until(ExpectedConditions
+			new WebDriverWait(driver, 2).until(ExpectedConditions
 					.visibilityOf(txtPassword));
 			txtPassword.clear();
 			txtPassword.sendKeys(password);
 		} catch (Exception e) {
-			System.out.println(e);
 			logger.info("error entering password");
 		}
 	}
 
 	public void clickOnSignin() {
 		try {
-			new WebDriverWait(driver, 10).until(ExpectedConditions
+			new WebDriverWait(driver, 2).until(ExpectedConditions
 					.elementToBeClickable(btnSignin));
 			btnSignin.click();
 		} catch (Exception e) {
-			System.out.println(e);
 			logger.info("error clicking on signin");
 		}
 	}
@@ -95,6 +98,13 @@ public class HomePagePattern extends tools.selenium {
 		enterUsername(username);
 		clickOnNext();
 		enterPassword(password);
+		clickOnSignin();
+	}
+
+	public void loginWithValidUser() {
+		enterUsername(this.VALID_USERNAME);
+		clickOnNext();
+		enterPassword(this.VALID_PASSWORD);
 		clickOnSignin();
 	}
 
