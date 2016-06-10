@@ -20,8 +20,9 @@ public class HomePage extends tools.selenium {
 
 	@Parameters
 	public static Collection<String[]> addedNumbers() {
-		return Arrays.asList(new String[][] { { "", "", "false" },
-				{ "", "password", "false" }, { "username", "", "false" },
+		return Arrays.asList(new String[][] { { "", "", "missingEmailError" },
+				{ "", "password", "missingEmailError" },
+				{ "username", "", "missingPasswordError" },
 				{ "selenium20160610", "gls27100G", "true" } });
 	}
 
@@ -38,17 +39,16 @@ public class HomePage extends tools.selenium {
 
 	@AfterClass
 	public static void tearDown() {
-		killDriver();
+		try {
+			killDriver();
+		} catch (Exception e) {
+		}
 	}
 
 	@Test
 	public void login() {
 		HomePagePattern hp = new HomePagePattern(true);
 		hp.enterUserAndPass(username, password);
-		if (Boolean.valueOf(expected)) {
-			hp.validateNavigationMenu();
-		} else {
-			hp.validateInvalidPasswordError();
-		}
+		hp.analizeResults(expected);
 	}
 }

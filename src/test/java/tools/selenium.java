@@ -30,7 +30,10 @@ public class selenium {
 	}
 
 	public static void killDriver() {
-		driver.quit();
+		try {
+			driver.quit();
+		} catch (Exception e) {
+		}
 	}
 
 	public void get(String url) {
