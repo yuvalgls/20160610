@@ -30,7 +30,7 @@ public class selenium {
 
 	public static void killDriver() {
 		try {
-			driver.quit();
+			driver.close();
 		} catch (Exception e) {
 		}
 	}
