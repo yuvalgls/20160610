@@ -20,7 +20,6 @@ public class selenium {
 	}
 
 	public static void setchromeDriver() {
-		System.out.println("Loading Chrome");
 		System.setProperty("webdriver.chrome.driver",
 				"seleniumDrivers/chromedriver.exe");
 		driver = new ChromeDriver();

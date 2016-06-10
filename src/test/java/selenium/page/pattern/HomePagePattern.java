@@ -6,6 +6,8 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 @SuppressWarnings("deprecation")
 public class HomePagePattern extends tools.selenium {
@@ -60,23 +62,30 @@ public class HomePagePattern extends tools.selenium {
 		try {
 			btnNext.click();
 		} catch (Exception e) {
+			System.out.println(e);
 			logger.info("error clicing on next");
 		}
 	}
 
 	public void enterPassword(String password) {
 		try {
+			new WebDriverWait(driver, 10).until(ExpectedConditions
+					.visibilityOf(txtPassword));
 			txtPassword.clear();
 			txtPassword.sendKeys(password);
 		} catch (Exception e) {
+			System.out.println(e);
 			logger.info("error entering password");
 		}
 	}
 
 	public void clickOnSignin() {
 		try {
+			new WebDriverWait(driver, 10).until(ExpectedConditions
+					.elementToBeClickable(btnSignin));
 			btnSignin.click();
 		} catch (Exception e) {
+			System.out.println(e);
 			logger.info("error clicking on signin");
 		}
 	}
