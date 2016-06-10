@@ -70,6 +70,7 @@ public class HomePagePattern extends tools.selenium {
 	}
 
 	public void validateInvalidPasswordError() {
+		logger.info("");
 		Assert.assertEquals("", this.INVALID_PASSWORD_ERROR,
 				this.txtInvalidPassword.getText().toString());
 	}
