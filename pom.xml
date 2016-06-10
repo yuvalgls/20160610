@@ -39,8 +39,7 @@
 				<version>2.8.1</version>
 				<configuration>
 					<includes>
-						<include>**/*Spec.*</include>
-						<include>*Test*</include>
+						<include>**/HomePage.java</include>
 					</includes>
 				</configuration>
 			</plugin>
