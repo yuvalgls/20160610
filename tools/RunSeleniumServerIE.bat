@@ -1,0 +1,1 @@
+java -jar %~dp0selenium-server-standalone-2.53.0.jar -role webdriver -browser "browserName=internet explorer,version=8,maxinstance=1, platform=WINDOWS" -hubHost 192.168.1.100 –port 8989

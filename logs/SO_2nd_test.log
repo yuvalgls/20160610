@@ -165,3 +165,12 @@
 2016-06-10 19:34:37 INFO  HomePagePattern:113 - Expected Results: missingPasswordError
 2016-06-10 19:34:37 INFO  HomePagePattern:91 - Logging with selenium20160610/gls27100G
 2016-06-10 19:34:38 INFO  HomePagePattern:113 - Expected Results: true
+2016-06-11 22:37:21 INFO  HomePagePattern:97 - Logging with /
+2016-06-11 22:37:41 INFO  HomePagePattern:82 - error entering password
+2016-06-11 22:37:44 INFO  HomePagePattern:92 - error clicking on signin
+2016-06-11 22:37:44 INFO  HomePagePattern:126 - Expected Results: missingEmailError
+2016-06-11 22:37:44 INFO  HomePagePattern:97 - Logging with username/
+2016-06-11 22:37:45 INFO  HomePagePattern:126 - Expected Results: missingPasswordError
+2016-06-11 22:37:56 INFO  HomePagePattern:97 - Logging with selenium20160610/gls27100G
+2016-06-11 22:37:58 INFO  HomePagePattern:126 - Expected Results: loggedUser
+2016-06-11 22:38:04 INFO  SendEmail:26 - testing send email

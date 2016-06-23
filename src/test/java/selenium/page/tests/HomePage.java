@@ -33,7 +33,8 @@ public class HomePage extends tools.selenium {
 
 	@BeforeClass
 	public static void setUp() {
-		setchromeDriver();
+		// setchromeDriver();
+		setHubDriver();
 	}
 
 	@AfterClass

@@ -1,16 +1,23 @@
 package tools;
 
+import java.net.URL;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+import selenium.page.pattern.HomePagePattern;
 
 public class selenium {
 	protected static WebDriver driver;
+	public static Logger logger = Logger.getLogger(selenium.class);
 	WebElement element;
 
 	public static void setFirefoxDriver() {
@@ -26,6 +33,20 @@ public class selenium {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 
+	}
+
+	public static void setHubDriver() {
+		try {
+			DesiredCapabilities cap = new DesiredCapabilities();
+			cap.setBrowserName("internet explorer");
+			cap.setVersion("8");
+			cap.setPlatform(org.openqa.selenium.Platform.WINDOWS);
+			driver = new RemoteWebDriver(new URL(
+					"http://192.168.1.100:4444/wd/hub"), cap);
+		} catch (Exception e) {
+			logger.info("Error loading selenium hub");
+			logger.info(e);
+		}
 	}
 
 	public static void killDriver() {

@@ -1,0 +1,12 @@
+2016-06-23 16:54:16 INFO  selenium:47 - Error loading selenium hub
+2016-06-23 16:54:16 INFO  selenium:48 - org.openqa.selenium.WebDriverException: Error forwarding the new session cannot find : Capabilities [{platform=WINDOWS, browserName=firefox, version=9.0.1}]
+Command duration or timeout: 3.41 seconds
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'Yuval-PC', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_91'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+2016-06-23 16:57:39 INFO  selenium:47 - Error loading selenium hub
+2016-06-23 16:57:39 INFO  selenium:48 - org.openqa.selenium.WebDriverException: Error forwarding the new session Error forwarding the request Connect to 10.0.2.15:5555 [/10.0.2.15] failed: Connection timed out: connect
+Command duration or timeout: 96.91 seconds
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'Yuval-PC', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_91'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
