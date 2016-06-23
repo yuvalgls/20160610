@@ -21,22 +21,29 @@ public class selenium {
 
 	public static void setFirefoxDriver() {
 		driver = new FirefoxDriver();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.manage().window().maximize();
+		setDriver();
 	}
 
 	public static void setchromeDriver() {
 		System.setProperty("webdriver.chrome.driver",
 				"seleniumDrivers/chromedriver.exe");
 		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.manage().window().maximize();
+		setDriver();
 	}
 
 	public static void setIEDriver() {
-		System.setProperty("webdriver.ie.driver",
-				"seleniumDrivers/IEDriverServer.exe");
-		driver = new InternetExplorerDriver();
+		try {
+			System.setProperty("webdriver.ie.driver",
+					"seleniumDrivers/IEDriverServer.exe");
+			DesiredCapabilities dc = DesiredCapabilities.internetExplorer();
+			driver = new InternetExplorerDriver(dc);
+			setDriver();
+		} catch (Exception e) {
+			System.err.println("Error: " + e);
+		}
+	}
+
+	private static void setDriver() {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 	}
