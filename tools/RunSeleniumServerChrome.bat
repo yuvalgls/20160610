@@ -1,0 +1,1 @@
+java -jar %~dp0selenium-server-standalone-2.53.0.jar -Dwebdriver.chrome.driver=%~dp0chromedriver.exe -role webdriver -browser "browserName=chrome,version=54.0,maxinstance=1, platform=WINDOWS" -hubHost 192.168.1.100 –port 8989

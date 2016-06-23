@@ -10,3 +10,9 @@ Command duration or timeout: 96.91 seconds
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'Yuval-PC', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_91'
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
+2016-06-23 17:36:01 INFO  selenium:47 - Error loading selenium hub
+2016-06-23 17:36:01 INFO  selenium:48 - org.openqa.selenium.WebDriverException: The path to the driver executable must be set by the webdriver.ie.driver system property; for more information, see https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver. The latest version can be downloaded from http://selenium-release.storage.googleapis.com/index.html
+Command duration or timeout: 364 milliseconds
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'Yuval-PC', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_91'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver

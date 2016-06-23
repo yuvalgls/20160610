@@ -10,10 +10,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-
-import selenium.page.pattern.HomePagePattern;
 
 public class selenium {
 	protected static WebDriver driver;
@@ -32,7 +31,14 @@ public class selenium {
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
+	}
 
+	public static void setIEDriver() {
+		System.setProperty("webdriver.ie.driver",
+				"seleniumDrivers/IEDriverServer.exe");
+		driver = new InternetExplorerDriver();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
 	}
 
 	public static void setHubDriver() {
